@@ -1,0 +1,36 @@
+baseURL = 'https://hagn.me/'
+theme = 'coder'
+title = 'sebastian hagn'
+languageCode = 'en-us'
+defaultcontentlanguage = "en"
+
+colorScheme = "auto"
+hidecolorschemetoggle = true
+
+[params]
+author = "Sebastian Hagn"
+info = "Data Scientist"
+description = "Sebastian Hagn's personal website"
+keywords = "blog,developer,personal,data scientist"
+# avatarurl = "images/avatar.jpg"
+# gravatar = "john.doe@example.com"
+rtl = false
+
+
+[[params.social]]
+name = "Github"
+icon = "fa fa-github fa-2x"
+weight = 1
+url = "https://github.com/shagn/"
+
+[[params.social]]
+name = "LinkedIn"
+icon = "fa fa-2x fa-linkedin"
+weight = 2
+url = "https://de.linkedin.com/in/sebastian-hagn/"
+
+[[params.social]]
+name = "XING"
+icon = "fa fa-2x fa-xing"
+weight = 3
+url = "https://www.xing.com/profile/Sebastian_Hagn3/"
