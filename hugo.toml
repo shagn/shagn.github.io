@@ -5,7 +5,7 @@ languageCode = 'en-us'
 defaultcontentlanguage = "en"
 
 colorScheme = "auto"
-hidecolorschemetoggle = true
+hidecolorschemetoggle = false
 
 [params]
 author = "Sebastian Hagn"
@@ -15,7 +15,10 @@ keywords = "blog,developer,personal,data scientist"
 # avatarurl = "images/avatar.jpg"
 # gravatar = "john.doe@example.com"
 rtl = false
+# customCSS = ["css/custom.css"]
 
+[markup.goldmark.renderer]
+  unsafe = true
 
 [[params.social]]
 name = "Github"
@@ -27,7 +30,7 @@ url = "https://github.com/shagn/"
 name = "LinkedIn"
 icon = "fa fa-2x fa-linkedin"
 weight = 2
-url = "https://de.linkedin.com/in/sebastian-hagn/"
+url = "https://www.linkedin.com/in/sebastian-hagn"
 
 [[params.social]]
 name = "XING"
