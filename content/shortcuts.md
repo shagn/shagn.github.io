@@ -1,6 +1,6 @@
----
-title: "Tastenkürzel Windows"
----
+______________________________________________________________________
+
+## title: "Tastenkürzel Windows"
 
 <style>
 kbd {
@@ -21,20 +21,36 @@ kbd {
 </style>
 
 ## Allgemein
-| Aktion | Tasten |
-| --- | --- |
-| Kopieren | <kbd>Strg</kbd> + <kbd>C</kbd> |
-| Einfügen | <kbd>Strg</kbd> + <kbd>V</kbd> |
-| Fenster maximieren | <kbd>Windows</kbd>+<kbd>&uparrow;</kbd> |
-| Fenster minimieren | <kbd>Windows</kbd>+<kbd>&downarrow;</kbd> |
-| Fenster auf rechte Bildschirmhälfte | <kbd>Windows</kbd>+<kbd>&rightarrow;</kbd> |
-| Fenster auf linke Bildschirmhälfte | <kbd>Windows</kbd>+<kbd>&leftarrow;</kbd> |
+
+| Aktion                                | Tasten                            |
+| ------------------------------------- | --------------------------------- |
+| Kopieren                              | <kbd>Strg</kbd> + <kbd>C</kbd>    |
+| Einfügen                              | <kbd>Strg</kbd> + <kbd>V</kbd>    |
+| Fenster maximieren                    | <kbd>Windows</kbd>+<kbd>↑</kbd>   |
+| Fenster minimieren                    | <kbd>Windows</kbd>+<kbd>↓</kbd>   |
+| Fenster auf rechte Bildschirmhälfte   | <kbd>Windows</kbd>+<kbd>→</kbd>   |
+| Fenster auf linke Bildschirmhälfte    | <kbd>Windows</kbd>+<kbd>←</kbd>   |
+| Zwischen offenen Anwendungen wechseln | <kbd>Alt</kbd>+<kbd>Tab</kbd>     |
+| Datei-Explorer öffnen                 | <kbd>Windows</kbd> + <kbd>E</kbd> |
+| Anzeigemodus für 2.Bildschirm wählen  | <kbd>Windows</kbd> + <kbd>P</kbd> |
 
 ## Browser
-| Aktion | Tasten |
-| --- | --- |
-| Neuer Tab | <kbd>Strg</kbd>+<kbd>T</kbd></span> |
-| Tab schließen |  <kbd>Strg</kbd>+<kbd>W</kbd> |
 
-## Excel
-...
+| Aktion        | Tasten                       |
+| ------------- | ---------------------------- |
+| Neuer Tab     | <kbd>Strg</kbd>+<kbd>T</kbd> |
+| Tab schließen | <kbd>Strg</kbd>+<kbd>W</kbd> |
+
+## Microsoft Office
+
+| Aktion | Tasten |
+| ------ | ------ |
+| ...    | ...    |
+
+<!-- ## Excel
+
+| Aktion                | Tasten |
+| --------------------- | ------ |
+| Spalte auswählen      | ...    |
+| Reihe auswählen       | ...    |
+| Spalte/Reihe einfügen | ...    | -->
