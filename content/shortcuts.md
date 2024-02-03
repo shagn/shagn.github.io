@@ -1,6 +1,6 @@
-______________________________________________________________________
-
-## title: "Tastenkürzel Windows"
+---
+title: "Tastenkürzel Windows"
+---
 
 <style>
 kbd {
