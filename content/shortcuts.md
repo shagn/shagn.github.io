@@ -42,6 +42,7 @@ kbd {
 | -------------------------------- | :----------------------------: |
 | Kopieren                         | <kbd>Strg</kbd> + <kbd>C</kbd> |
 | Einfügen                         | <kbd>Strg</kbd> + <kbd>V</kbd> |
+| Speichern                        | <kbd>Strg</kbd> + <kbd>S</kbd> |
 | Drucken                          | <kbd>Strg</kbd> + <kbd>P</kbd> |
 | Rückgängig machen/Schritt zurück | <kbd>Strg</kbd> + <kbd>Z</kbd> |
 | Schritt wieder                   | <kbd>Strg</kbd> + <kbd>Y</kbd> |
