@@ -1,5 +1,5 @@
 ---
-title: "Tastenkürzel"
+title: "shortcuts"
 ---
 
 <style>
@@ -20,65 +20,66 @@ kbd {
 }
 </style>
 
+Some useful shortcuts for Windows.
+
 ## Windows
 
-| Aktion                               |              Tasten               |
-| ------------------------------------ | :-------------------------------: |
-| Fenster maximieren                   |  <kbd>Windows</kbd>+<kbd>↑</kbd>  |
-| Fenster minimieren                   |  <kbd>Windows</kbd>+<kbd>↓</kbd>  |
-| Fenster auf rechte Bildschirmhälfte  |  <kbd>Windows</kbd>+<kbd>→</kbd>  |
-| Fenster auf linke Bildschirmhälfte   |  <kbd>Windows</kbd>+<kbd>←</kbd>  |
-| Übersicht aller offenen Anwendungen  |   <kbd>Alt</kbd>+<kbd>Tab</kbd>   |
-| Datei-Explorer öffnen                | <kbd>Windows</kbd> + <kbd>E</kbd> |
-| Anzeigemodus für 2.Bildschirm wählen | <kbd>Windows</kbd> + <kbd>P</kbd> |
-| Bildschirm sperren                   | <kbd>Windows</kbd> + <kbd>L</kbd> |
-| Anwendung schließen                  |  <kbd>Alt</kbd> + <kbd>F4</kbd>   |
-| Windows sperren                      | <kbd>Windows</kbd> + <kbd>L</kbd> |
-| Desktop anzeigen                     | <kbd>Windows</kbd> + <kbd>D</kbd> |
+| Action                                 |               Keys                |
+| -------------------------------------- | :-------------------------------: |
+| Maximize window                        |  <kbd>Windows</kbd>+<kbd>↑</kbd>  |
+| Minimize window                        |  <kbd>Windows</kbd>+<kbd>↓</kbd>  |
+| Window to the right half of the screen |  <kbd>Windows</kbd>+<kbd>→</kbd>  |
+| Window to the left half of the screen  |  <kbd>Windows</kbd>+<kbd>←</kbd>  |
+| View all open applications             |   <kbd>Alt</kbd>+<kbd>Tab</kbd>   |
+| Open File Explorer                     | <kbd>Windows</kbd> + <kbd>E</kbd> |
+| Choose display mode for 2nd screen     | <kbd>Windows</kbd> + <kbd>P</kbd> |
+| Lock screen                            | <kbd>Windows</kbd> + <kbd>L</kbd> |
+| Close application                      |  <kbd>Alt</kbd> + <kbd>F4</kbd>   |
+| Lock screen                            | <kbd>Windows</kbd> + <kbd>L</kbd> |
+| Show desktop                           | <kbd>Windows</kbd> + <kbd>D</kbd> |
 
-## Anwendungen allgemein
+## Applications overall
 
-| Aktion                           |             Tasten             |
-| -------------------------------- | :----------------------------: |
-| Kopieren                         | <kbd>Strg</kbd> + <kbd>C</kbd> |
-| Einfügen                         | <kbd>Strg</kbd> + <kbd>V</kbd> |
-| Speichern                        | <kbd>Strg</kbd> + <kbd>S</kbd> |
-| Drucken                          | <kbd>Strg</kbd> + <kbd>P</kbd> |
-| Rückgängig machen/Schritt zurück | <kbd>Strg</kbd> + <kbd>Z</kbd> |
-| Schritt wieder                   | <kbd>Strg</kbd> + <kbd>Y</kbd> |
-| Suchen                           | <kbd>Strg</kbd> + <kbd>F</kbd> |
+| Action |              Keys              |
+| ------ | :----------------------------: |
+| Copy   | <kbd>Ctrl</kbd> + <kbd>C</kbd> |
+| Paste  | <kbd>Ctrl</kbd> + <kbd>V</kbd> |
+| Save   | <kbd>Ctrl</kbd> + <kbd>S</kbd> |
+| Print  | <kbd>Ctrl</kbd> + <kbd>P</kbd> |
+| Undo   | <kbd>Ctrl</kbd> + <kbd>Z</kbd> |
+| Redo   | <kbd>Ctrl</kbd> + <kbd>Y</kbd> |
+| Search | <kbd>Ctrl</kbd> + <kbd>F</kbd> |
 
 ## Browser
 
-| Aktion            |            Tasten            |
-| ----------------- | :--------------------------: |
-| Neuer Tab         | <kbd>Strg</kbd>+<kbd>T</kbd> |
-| Tab schließen     | <kbd>Strg</kbd>+<kbd>W</kbd> |
-| Tab aktualisieren | <kbd>Strg</kbd>+<kbd>R</kbd> |
+| Action      |             Keys             |
+| ----------- | :--------------------------: |
+| New tab     | <kbd>Ctrl</kbd>+<kbd>T</kbd> |
+| Close tab   | <kbd>Ctrl</kbd>+<kbd>W</kbd> |
+| Refresh tab | <kbd>Ctrl</kbd>+<kbd>R</kbd> |
 
 ## Microsoft Office
 
-| Aktion                                |                                        Tasten                                         |
-| ------------------------------------- | :-----------------------------------------------------------------------------------: |
-| Neues Fenster öffnen                  |                             <kbd>Strg</kbd>+<kbd>N</kbd>                              |
-| Fenster schließen                     |                             <kbd>Strg</kbd>+<kbd>W</kbd>                              |
-| Alles auswählen                       |                             <kbd>Strg</kbd>+<kbd>A</kbd>                              |
-| Markierung schrittweise vergrößern    |         <kbd>Shift</kbd>++<kbd>↑</kbd>/<kbd>↓</kbd>/<kbd>←</kbd>/<kbd>→</kbd>         |
-| Markierung abschnittsweise vergrößern | <kbd>Shift</kbd>+<kbd>Strg</kbd>++<kbd>↑</kbd>/<kbd>↓</kbd>/<kbd>←</kbd>/<kbd>→</kbd> |
+| Action                         |                                         Keys                                          |
+| ------------------------------ | :-----------------------------------------------------------------------------------: |
+| Open new window                |                             <kbd>Ctrl</kbd>+<kbd>N</kbd>                              |
+| Close window                   |                             <kbd>Ctrl</kbd>+<kbd>W</kbd>                              |
+| Select all                     |                             <kbd>Ctrl</kbd>+<kbd>A</kbd>                              |
+| Increase selection stepwise    |         <kbd>Shift</kbd>++<kbd>↑</kbd>/<kbd>↓</kbd>/<kbd>←</kbd>/<kbd>→</kbd>         |
+| Increase selection sectionwise | <kbd>Shift</kbd>+<kbd>Ctrl</kbd>++<kbd>↑</kbd>/<kbd>↓</kbd>/<kbd>←</kbd>/<kbd>→</kbd> |
 
 ### Word
 
-| Aktion                       |                   Tasten                   |
+| Action                       |                    Keys                    |
 | ---------------------------- | :----------------------------------------: |
 | Markierung über Zeile hinweg | <kbd>Shift</kbd>+<kbd>↑</kbd>/<kbd>↓</kbd> |
 
 ### Excel
 
-| Aktion                        |                                Tasten                                |
-| ----------------------------- | :------------------------------------------------------------------: |
-| Zellen auswählen              |              <kbd>Strg</kbd>+<kbd>Linke Maustaste</kbd>              |
-| Spalte auswählen              |                 <kbd>Strg</kbd>+<kbd>Leertaste</kbd>                 |
-| Reihe auswählen               |                <kbd>Shift</kbd>+<kbd>Leertaste</kbd>                 |
-| Spalte/Reihe einfügen         |                     <kbd>Strg</kbd>+<kbd>+</kbd>                     |
-| Ans Ende einer Reihe springen | <kbd>Strg</kbd>+<kbd>↑</kbd>/<kbd>↓</kbd>/<kbd>←</kbd>/<kbd>→</kbd>  |
-| Ans Ende einer Reihe springen | <kbd>Strg</kbd> +<kbd>↑</kbd>/<kbd>↓</kbd>/<kbd>←</kbd>/<kbd>→</kbd> |
+| Action             |                                Keys                                 |
+| ------------------ | :-----------------------------------------------------------------: |
+| Select cells       |              <kbd>Ctrl</kbd>+<kbd>Left mouse key</kbd>              |
+| Select column      |                 <kbd>Ctrl</kbd>+<kbd>spacebar</kbd>                 |
+| Select row         |                <kbd>Shift</kbd>+<kbd>spacebar</kbd>                 |
+| Insert column/row  |                    <kbd>Ctrl</kbd>+<kbd>+</kbd>                     |
+| Jump to end of row | <kbd>Ctrl</kbd>+<kbd>↑</kbd>/<kbd>↓</kbd>/<kbd>←</kbd>/<kbd>→</kbd> |

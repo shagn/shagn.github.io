@@ -1,8 +1,9 @@
 baseURL = 'https://hagn.me/'
 theme = 'coder'
 title = 'sebastian hagn'
-languageCode = 'en-us'
+languageCode = 'en'
 defaultcontentlanguage = "en"
+enableEmoji = true
 
 colorScheme = "auto"
 hidecolorschemetoggle = false
@@ -37,3 +38,22 @@ name = "XING"
 icon = "fa fa-2x fa-xing"
 weight = 3
 url = "https://www.xing.com/profile/Sebastian_Hagn3/"
+
+[languages.en]
+languageName = ":us:"
+
+[[languages.en.menu.main]]
+name = "shortcuts"
+weight = 1
+url = "shortcuts/"
+
+[languages.de]
+languageName = ":de:"
+
+[languages.de.params]
+description = "Sebastian Hagn's persönliche Webseite"
+
+[[languages.de.menu.main]]
+name = "Tastenkürzel"
+weight = 1
+url = "shortcuts/"
