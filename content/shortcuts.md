@@ -72,7 +72,7 @@ Some useful shortcuts for Windows.
 
 | Action                       |                    Keys                    |
 | ---------------------------- | :----------------------------------------: |
-| Markierung über Zeile hinweg | <kbd>Shift</kbd>+<kbd>↑</kbd>/<kbd>↓</kbd> |
+| Extend selection over multiple lines | <kbd>Shift</kbd>+<kbd>↑</kbd>/<kbd>↓</kbd> |
 
 ### Excel
 
