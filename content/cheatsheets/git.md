@@ -1,6 +1,6 @@
 ---
 title: "Git"
-date: "2024-12-30"
+date: "2025-01-01"
 description: "Overview of often used commands with examples"
 tags: ["wip"]
 ---
@@ -18,7 +18,23 @@ tags: ["wip"]
 
 ## Configuration
 
-...
+Each git config variable can be stored in 3 different levels:
+
+1. `--system`: System level - applied to every user user on the system and all their repositories
+1. `--global`: Global level - values specific personally to you, the user
+1. `--local`: Repository level - specific to a single repository
+
+- View configuration:
+
+  - all lelvel: `git config --list`
+    - `--show-orign`: with origin
+  - for a specific level: `git config --list --system/global/local`
+
+- Set configuration: `git config --system/global/local <setting> <value>`
+
+  - e.g. system: `git config --system color.ui true`
+  - e.g. setting email for the user: `git config --global user.email "your@example.com"`
+  - e.g. setting no email for a repo: `git config --local user.email '<>'`
 
 ## Create a repository
 
@@ -29,9 +45,23 @@ tags: ["wip"]
 
 ## Branches
 
-...
+- list existing branches: `git branch`
+
+  - `-a`: list both remote-tracking branches and local branches
+  - `-v`: list remote-tracking branches
+
+- delete a branch:
+
+  - local: `git branch --delete <branch name>`
+  - remote: `git push origin --delete <branch name>`
 
 ## Making a commit
+
+- Show the current status: `git status`
+
+  - `-s`: show only affected files and their short status
+
+- Show changes in a file: `git diff <path to file>`
 
 - Stage / Unstage files:
 
@@ -54,9 +84,39 @@ tags: ["wip"]
 
 ...
 
+## Remote
+
+The `git remote` command lets you manage connections to other repositories.
+
+- List configured remotes: `git remote -v`
+- Add remote: `git remote add <remote_name e.g. origin> <remote_url>`
+- Remove remote: `git remote remove/rm <remote name e.g. origin>`
+
 ## Update / Publish
 
-...
+- `git fetch`: downloads all changes from remote, but does not update the local repo's working state
+  - `--prune/-p`: remove any remote-tracking references that no longer exist on the remote [^git-scm-fetch]
+- `git pull`: downloads all changes from remote and directly merges it into `HEAD`
+
+## Stash
+
+- Show stashes: `git stash list`
+- Create a stash:
+  - `git stash save "<name>"`
+  - `--staged`: only stash staged files
+- Show changes of stash: `git stash show`
+- Apply a stash:
+  - with deleting: `git stash pop`
+  - without deleting: `git stash apply`
+  - only retrieve one file from stash: `git checkout stash@{0} -- <file_name>`
+- Delete a stash:
+  - the last one: `git stash drop`
+  - all stashes: `git stash clear`
+- Recover (recently) deleted stash:
+  1. If terminal is still open:
+  - get hash from the `git stash pop` command
+  - otherwise use `git fsck --no-reflog | awk '/dangling commit/ {print $3}'`
+  2. `git stash apply <hash>`
 
 ## History
 
@@ -74,3 +134,4 @@ Short cheatsheet:  https://www.git-tower.com/blog/git-cheat-sheet/
 ## References
 
 [^git-scm]: https://git-scm.com/docs/user-manual.html#glossary
+[^git-scm-fetch]: https://git-scm.com/docs/git-fetch
