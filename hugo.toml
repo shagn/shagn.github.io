@@ -1,5 +1,5 @@
 baseURL = 'https://hagn.me/'
-theme = 'coder'
+theme = 'hugo-coder'
 title = 'sebastian hagn'
 languageCode = 'en'
 defaultcontentlanguage = "en"
