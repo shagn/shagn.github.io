@@ -36,6 +36,11 @@ Each git config variable can be stored in 3 different levels:
   - e.g. setting email for the user: `git config --global user.email "your@example.com"`
   - e.g. setting no email for a repo: `git config --local user.email '<>'`
 
+Configuration parameters
+
+- _user.email_
+- _push.autoSetupRemote_
+
 ## Create a repository
 
 - Create a new local repository: `git init`
@@ -45,15 +50,24 @@ Each git config variable can be stored in 3 different levels:
 
 ## Branches
 
-- list existing branches: `git branch`
+- List existing branches: `git branch`
 
   - `-a`: list both remote-tracking branches and local branches
   - `-v`: list remote-tracking branches
 
-- delete a branch:
+- Create a branch: `git branch <branchname>`
+
+- Switch to a branch: `git switch <branchname>`
+
+- Delete a branch:
 
   - local: `git branch --delete <branch name>`
   - remote: `git push origin --delete <branch name>`
+
+- Rename a branch:
+
+  - local branch: `git branch -m <branchname> <new branchname>`
+  - remote branch: `git remote rename <branchname> <new branchname>`
 
 ## Making a commit
 
@@ -82,14 +96,24 @@ Each git config variable can be stored in 3 different levels:
 
 ## Undo / Reset
 
-...
+### Local
+
+- Undo changes to a tracked file: `git checkout -- <path_to_file>`
+- Remove local untracked files: `git clean -f -d`
+- Reset to a remote branch: `git reset --hard <remote name e.g. origin>/<branch name>`
+
+<!-- - `--soft`: undo last local commit, but keep changes ?! -->
+
+### Puplic
+
+`git revert` e.g. revert last commit `git revert HEAD`
 
 ## Remote
 
 The `git remote` command lets you manage connections to other repositories.
 
 - List configured remotes: `git remote -v`
-- Add remote: `git remote add <remote_name e.g. origin> <remote_url>`
+- Add remote: `git remote add <remote name e.g. origin> <remote_url>`
 - Remove remote: `git remote remove/rm <remote name e.g. origin>`
 
 ## Update / Publish
@@ -97,6 +121,9 @@ The `git remote` command lets you manage connections to other repositories.
 - `git fetch`: downloads all changes from remote, but does not update the local repo's working state
   - `--prune/-p`: remove any remote-tracking references that no longer exist on the remote [^git-scm-fetch]
 - `git pull`: downloads all changes from remote and directly merges it into `HEAD`
+- merge changes from one branch into another: (on the branch which should be merged into) `git merge <branchname which should be merged>`
+- rebase a branch on another: `git rebase <branchname which should be rebased on>`
+- cherry-picking: `git cherry-pick <commit_id>`
 
 ## Stash
 
