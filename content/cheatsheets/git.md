@@ -11,7 +11,7 @@ tags: ["wip"]
 
 `HEAD`: reference pointing to where you are in the commit history (check with `cat .git/HEAD`)
 
-- Typically pointing to a \``head`\` (the named reference to the commit of the tip of a branch)
+- Typically pointing to a `head` (the named reference to the commit of the tip of a branch)
 - If it not references a branch, it is called `detached HEAD`[^git-scm]
 
 <!-- `--force-with-lease`: only allows a push to proceed if the remote branch hasn't been updated by someone else since your last fetch -->
