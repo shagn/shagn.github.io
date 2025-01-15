@@ -1,0 +1,63 @@
+baseURL = 'https://hagn.me/'
+theme = 'hugo-coder'
+title = 'sebastian hagn'
+languageCode = 'en'
+defaultcontentlanguage = "en"
+enableEmoji = true
+
+[params]
+author = "Sebastian Hagn"
+info = "Data Scientist"
+description = "Sebastian Hagn's personal website"
+keywords = "blog,developer,personal,data scientist"
+# avatarurl = "images/avatar.jpg"
+# gravatar = "john.doe@example.com"
+rtl = false
+# customCSS = ["css/custom.css"]
+colorScheme = "auto"
+hidecolorschemetoggle = false
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[[params.social]]
+name = "Github"
+icon = "fa fa-github fa-2x"
+weight = 1
+url = "https://github.com/shagn/"
+
+[[params.social]]
+name = "LinkedIn"
+icon = "fa fa-2x fa-linkedin"
+weight = 2
+url = "https://www.linkedin.com/in/sebastian-hagn"
+
+[[params.social]]
+name = "XING"
+icon = "fa fa-2x fa-xing"
+weight = 3
+url = "https://www.xing.com/profile/Sebastian_Hagn3/"
+
+[languages.en]
+languageName = ":us:"
+
+[[languages.en.menu.main]]
+name = "cheatsheets"
+weight = 1
+url = "cheatsheets/"
+
+[[languages.en.menu.main]]
+name = "shortcuts"
+weight = 2
+url = "shortcuts/"
+
+[languages.de]
+languageName = ":de:"
+
+[languages.de.params]
+description = "Sebastian Hagn's persönliche Webseite"
+
+[[languages.de.menu.main]]
+name = "Tastenkürzel"
+weight = 1
+url = "shortcuts/"
