@@ -70,7 +70,9 @@ Selected configuration parameters
   - local branch: `git branch -m <branchname> <new branchname>`
   - remote branch: `git remote rename <branchname> <new branchname>`
 
-## Making a commit
+- Set tracking information to a local branch: `git branch --set-upstream-to=origin/<remote branch> <local branch name>`
+
+## Make a commit
 
 - Show the current status: `git status`
 
@@ -90,10 +92,17 @@ Selected configuration parameters
   - with a message: `git commit -m '<commit message>'`
   - without triggering pre-commit and commit-msg hooks: `git commit -m '<commit message>' --no-verify`
 
-- Change a commit:
+- Change the last commit:
 
   - change the commit message: `git commit --amend -m "an updated commit message"`
   - change files: `git commit --amend --no-edit`
+
+- Squashing commits: 
+
+  - Squashing the last _n_ commits: 
+    - `git reset --soft HEAD~<n>`
+    - `git commit -m "<new commit message>"`
+    - (`git push --force-with-lease"`)
 
 ## Undo / Reset
 
