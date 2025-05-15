@@ -24,12 +24,25 @@ Find out current user and its groups:
 
 ```bash
 whoami  # shows current user
+groups # shows groups of current user
 groups <user>  # shows groups user belongs to
+
+gentent group # list all groups
+getent group <group> # shows members of a group
+
+# add user to an additional group
+sudo usermod -aG <group> <user>
+# -a: append, otherwise user will be removed from all not listed groups
+# -G: takes a comma separated list of groups
 ```
 
 ## Commands
 
+- TODO: df # total used and available disk space
+
 - TODO: key generation
+
+- TODO: nohup
 
 - __chmod__: changing rights
 

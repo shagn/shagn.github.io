@@ -1,6 +1,6 @@
 ---
 title: "Docker"
-date: "2024-12-31"
+date: "2025-04-03"
 tags: ["wip"]
 draft: false
 ---
@@ -10,8 +10,9 @@ draft: false
 ```bash
 sudo service docker start/restart/stop
 
-# cleaning up unused images/containers 
-docker system prune
+# cleaning up
+docker system prune # removes all stopped containers, unused networks, dangling images, and build cache
+docker system prune -a # remove all unused images, not just dangling ones
 
 # delete all images 
 docker rmi $(docker images -q)

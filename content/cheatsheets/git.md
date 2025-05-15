@@ -1,11 +1,9 @@
 ---
 title: "Git"
-date: "2025-01-15"
+date: "2025-05-15"
 description: "Overview of often used commands with examples"
 tags: ["wip"]
 ---
-
-<!-- [this works!](#history) -->
 
 ## Glossary
 
@@ -35,6 +33,13 @@ Each git config variable can be stored in 3 different levels:
   - e.g. system: `git config --system color.ui true`
   - e.g. setting user name: `git config --global user.name "John Doe"`
   - e.g. setting empty user email for a repo: `git config --local user.email '<>'`
+  - e.g. setting _nano_ as editor: `git config --global core.editor "nano"`
+
+- Delete configuration: 
+  - one value: `git config --global --unset user.name`
+  - one section: `git config --global --remove-section user`
+
+- Edit configuration file directly: `git config --global --edit`
 
 Selected configuration parameters
 
@@ -142,9 +147,11 @@ The `git remote` command lets you manage connections to other repositories.
   - `git stash save "<name>"`
   - `--staged`: only stash staged files
 - Show changes of stash: `git stash show`
-- Apply a stash:
+- Apply the last stash:
   - with deleting: `git stash pop`
   - without deleting: `git stash apply`
+- Apply specific file/stash:
+  - `git stash apply 1`
   - only retrieve one file from stash: `git checkout stash@{0} -- <file_name>`
 - Delete a stash:
   - the last one: `git stash drop`
