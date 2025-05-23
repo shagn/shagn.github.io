@@ -17,6 +17,7 @@ aws ec2 stop-instances --instance-ids <instance id>
 aws s3 ls  
 aws s3 sync <old_s3_uri> <new_s3_uri>  
 aws s3 rm <s3_uri> # add --recursive to avoid being prompted for confirmation for every file
+aws s3 rm s3://some-bucket-name/ --recursive --exclude "*" --include "*.json" --dryrun  # delete all JSON files from a bucket
 ```
 
 ## VPC

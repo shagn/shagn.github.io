@@ -13,11 +13,3 @@ list_a = ["value1", "value2", ...]
 c = Counter(list_a)
 c.most_common()
 ```
-
-## Logging
-
-...
-
-## Dependency management
-
-...
