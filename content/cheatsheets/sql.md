@@ -7,6 +7,21 @@ draft: false
 
 ## Postgres
 
+### Select query on _jsonb_ column
+
+Example content of the _json_column_name_: `[{"json_key":"json_value"}]`
+
+```sql
+-- Get specific value of the first element of an array
+SELECT json_column_name -> 0 ->> 'json_key'
+FROM table_name
+WHERE json_column_name IS NOT NULL AND json_column_name <> '[]'::jsonb;
+
+-- Get length of an JSON array
+select jsonb_array_length(json_column_name)
+FROM table_name
+```
+
 ### Check schema
 
 ```sql
@@ -19,7 +34,8 @@ SELECT
 FROM 
     information_schema.columns
 WHERE 
-    table_name = 'table_name';
+    table_schema = 'table_schema'
+    and table_name = 'table_name';
 ```
 
 ### Create an index
