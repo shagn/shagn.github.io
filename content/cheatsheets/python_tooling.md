@@ -1,6 +1,6 @@
 ---
 title: "Python Tooling"
-date: "2025-05-23"
+date: "2025-06-06"
 description: ""
 tags: ["stub"]
 draft: false
@@ -29,8 +29,14 @@ coverage xml -o coverage.xml
 ## Dependency management
 
 ### uv
-...
-
+```bash
+# create a project
+uv init 
+# add dependency
+uv add boto3
+uv add "boto3>=@2.38.1"  # in specific version
+uv add boto3 --dev  # as developer dependency
+```
 
 ### poetry
 ```bash
