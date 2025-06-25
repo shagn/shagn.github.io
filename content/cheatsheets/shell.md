@@ -62,6 +62,16 @@ sudo usermod -aG <group> <user>
     chmod 400 private-key-file.pem # restricting file access (read) to yourself
     ```
 
+- __du__: 
+  - get the size of a folder: `du -hs /path/to/directory`
+    - `s`: gives only the summary of the folder, not for every folder separately
+
+- __grep__: 
+  - use regex: e.g. select the lines that contain either "hook id:" or "duration:":
+    ```bash 
+    grep -E '(hook id:|duration:)' pre-commit-logs.txt
+    ```
+
 ## Custom function 
 ```bash 
 # in .zshrc

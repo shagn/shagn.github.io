@@ -6,26 +6,6 @@ tags: ["stub"]
 draft: false
 ---
 
-## Logging
-...
-
-## Testing
-
-### pytest
-```bash
-# executing specific test in a specific folder
-pytest ./path/to/folder -k 'name_of_test'
-
-# with coverage (depends on pytest-cov)
-pytest --cov=. --cov-report=xml:coverage.xml
-
-# combining multiple coverage files 
-COVERAGE_FILE=.coverage.file1 pytest --cov=. --cov-append path/to/test_folder_1 && \
-COVERAGE_FILE=.coverage.file2 pytest --cov=. --cov-append path/to/test_folder_2 && \
-coverage combine && \
-coverage xml -o coverage.xml
-```
-
 ## Dependency management
 
 ### uv
@@ -54,3 +34,35 @@ poetry remove checkov --group dev
 
 ### pyenv
 ...
+
+## Linter / Formatter
+
+### ruff 
+...
+
+### pylint 
+... 
+
+### black
+... 
+
+
+## Logging
+...
+
+## Testing
+
+### pytest
+```bash
+# executing specific test in a specific folder
+pytest ./path/to/folder -k 'name_of_test'
+
+# with coverage (depends on pytest-cov)
+pytest --cov=. --cov-report=xml:coverage.xml
+
+# combining multiple coverage files 
+COVERAGE_FILE=.coverage.file1 pytest --cov=. --cov-append path/to/test_folder_1 && \
+COVERAGE_FILE=.coverage.file2 pytest --cov=. --cov-append path/to/test_folder_2 && \
+coverage combine && \
+coverage xml -o coverage.xml
+```
