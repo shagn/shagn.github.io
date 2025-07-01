@@ -11,13 +11,14 @@ Code for my personal website
 
 2. Build the site with `hugo server`
 
-## Update template 
+## Updating template 
 
 Go into the subdirectory and pull the newest changes from `master` and commit the changes. 
+
 ```
 cd themes/hugo-coder
 git pull
-´´´
+```
 
 ## Deployment
 

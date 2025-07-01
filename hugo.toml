@@ -47,8 +47,13 @@ weight = 1
 url = "cheatsheets/"
 
 [[languages.en.menu.main]]
-name = "shortcuts"
+name = "how-tos"
 weight = 2
+url = "how-tos/"
+
+[[languages.en.menu.main]]
+name = "shortcuts"
+weight = 3
 url = "shortcuts/"
 
 [languages.de]
