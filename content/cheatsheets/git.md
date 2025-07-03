@@ -1,6 +1,10 @@
-______________________________________________________________________
-
-## title: "Git" date: "2025-05-15" description: "Overview of often used commands with examples" tags: \["wip"\]
+---
+title: "Git"
+description: "Overview of often used commands with examples"
+date: "2025-07-03"
+tags: ["wip"]
+draft: false
+---
 
 ## Glossary
 

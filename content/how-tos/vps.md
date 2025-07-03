@@ -1,6 +1,9 @@
-______________________________________________________________________
-
-## title: "VPS setup" date: "2025-01-14" tags: \["stub"\] draft: true
+---
+title: "VPS setup"
+date: "2025-01-14"
+tags: ["stub"]
+draft: true
+---
 
 <!-- ## Secure SSH login
 
