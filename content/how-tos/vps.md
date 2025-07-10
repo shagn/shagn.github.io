@@ -73,25 +73,24 @@ Source: [IONOS Guide (German)](https://www.ionos.de/hilfe/sicherheit/dedicated-s
 
 ### unattended-upgrades
 
-```bash
-# install it
-sudo apt install unattended-upgrades
+1. Installation 
+    ```bash
+    sudo apt install unattended-upgrades
+    ````
 
-# main configuration lives at, check if security updates are not commented out
-/etc/apt/apt.conf.d/50unattended-upgrades
+1. Check in the configuration if security updates are not commented out
+    - main config: `/etc/apt/apt.conf.d/50unattended-upgrades`
+    - auto-upgrade config: `cat /etc/apt/apt.conf.d/20auto-upgrades`
 
-# there are two configs
-# config for periodic updates
-cat /etc/apt/apt.conf.d/20auto-upgrades
-
-# both configs will be merged, so to check the outcome use `sudo apt-config dump | grep Periodic`
-
-## how to check if the setup is correct
-    1. check config for APT::Periodic::Unattended-Upgrade "1";
-    2. check /etc/apt/apt.conf.d/50unattended-upgrades shows allowed origins
-    3. check systemctl status apt-daily-upgrade.timer shows something like `Active: active (waiting)`
+1. Check general setup
+    1. check config contains `APT::Periodic::Unattended-Upgrade "1"`;
+    2. check ` /etc/apt/apt.conf.d/50unattended-upgrades` shows allowed origins
+    3. check `systemctl status apt-daily-upgrade.timer` shows something like `Active: active (waiting)`
     4. check logs e.g. with `journalctl -u unattended-upgrades.service`if it has been executed
 
+Optional: Allow updates also for packages from foreign sources
+```bash
+# both configs will be merged, so to check the outcome use `sudo apt-config dump | grep Periodic`
     Hierzu muss die Datei /etc/apt/apt.conf.d/50unattended-upgrades um folgenden Inhalt ergänzt werden.
 Unattended-Upgrade::Origins-Pattern {
     "origin=*";
