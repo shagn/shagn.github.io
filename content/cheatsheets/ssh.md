@@ -1,9 +1,6 @@
----
-title: "SSH"
-date: "2025-07-06"
-tags: ["stub"]
-draft: true
----
+______________________________________________________________________
+
+## title: "SSH" date: "2025-07-06" tags: \["stub"\] draft: true
 
 ### ssh config
 
@@ -14,6 +11,13 @@ Host vps
     IdentityFile ~/.ssh/id_vps # 
     AddKeysToAgent yes  # automatically adds the key to the running agent
     UseKeychain yes # stores the passphrase in the macOS Keychain
+    ServerAliveInterval 60 # send keep-alive signal every 60 s (disabled by default)
+```
+
+Show the settings for a host
+
+```bash
+ssh -G vps
 ```
 
 ## ssh-keygen

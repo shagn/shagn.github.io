@@ -1,9 +1,6 @@
----
-title: "Shell"
-date: "2025-01-14"
-tags: ["stub"]
-draft: true
----
+______________________________________________________________________
+
+## title: "Shell" date: "2025-01-14" tags: \["stub"\] draft: true
 
 ## Operators
 
@@ -36,6 +33,19 @@ sudo usermod -aG <group> <user>
 # -G: takes a comma separated list of groups
 ```
 
+Reboot / shutting down
+
+```bash
+reboot
+```
+
+Updating packages on Ubuntu
+
+```bash
+sudo apt-get update
+sudo apt-get upgrade # upgrades all packages that can be upgraded without breaking other packages
+```
+
 ## Commands
 
 - TODO: df # total used and available disk space
@@ -62,18 +72,21 @@ sudo usermod -aG <group> <user>
     chmod 400 private-key-file.pem # restricting file access (read) to yourself
     ```
 
-- __du__: 
+- __du__:
+
   - get the size of a folder: `du -hs /path/to/directory`
     - `s`: gives only the summary of the folder, not for every folder separately
 
-- __grep__: 
+- __grep__:
+
   - use regex: e.g. select the lines that contain either "hook id:" or "duration:":
-    ```bash 
+    ```bash
     grep -E '(hook id:|duration:)' pre-commit-logs.txt
     ```
 
-## Custom function 
-```bash 
+## Custom function
+
+```bash
 # in .zshrc
 start_ec2() {
   export AWS_DEFAULT_REGION=eu-central-1

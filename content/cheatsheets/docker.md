@@ -1,9 +1,6 @@
----
-title: "Docker"
-date: "2025-04-03"
-tags: ["wip"]
-draft: false
----
+______________________________________________________________________
+
+## title: "Docker" date: "2025-04-03" tags: \["wip"\] draft: false
 
 ## General
 
@@ -66,6 +63,26 @@ docker save <image_name> # saved as .tar
 docker save <image name>:2 | gzip > file_name.tar.gz # with gzip
 
 docker load < file_name.tar.gz
+```
+
+## Docker Compose
+
+Docker Compose is a tool for defining and running multi-container applications based on the YAML based compose file.
+
+Example compose.yml
+
+```yaml
+services:
+  caddy:
+    image: caddy:2.10
+    restart: unless-stopped  # container will start unless deliberately stopped by the user
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./conf:/etc/caddy  # maps a local directory ./conf on the host machine to /etc/caddy inside the container
+      - caddy_data:/data  # creates a named volume `caddy_data` mapped to `data` in the container. Named volumes are managed by Docker and persist even when containers are removed
 ```
 
 ## References

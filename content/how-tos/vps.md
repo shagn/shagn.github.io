@@ -1,9 +1,6 @@
----
-title: "VPS setup"
-date: "2025-01-14"
-tags: ["stub"]
-draft: true
----
+______________________________________________________________________
+
+## title: "VPS setup" date: "2025-01-14" tags: \["stub"\] draft: true
 
 ## Secure SSH login
 
@@ -73,22 +70,26 @@ Source: [IONOS Guide (German)](https://www.ionos.de/hilfe/sicherheit/dedicated-s
 
 ### unattended-upgrades
 
-1. Installation 
-    ```bash
-    sudo apt install unattended-upgrades
-    ````
+1. Installation
+
+   ```bash
+   sudo apt install unattended-upgrades
+   ```
 
 1. Check in the configuration if security updates are not commented out
-    - main config: `/etc/apt/apt.conf.d/50unattended-upgrades`
-    - auto-upgrade config: `cat /etc/apt/apt.conf.d/20auto-upgrades`
+
+   - main config: `/etc/apt/apt.conf.d/50unattended-upgrades`
+   - auto-upgrade config: `cat /etc/apt/apt.conf.d/20auto-upgrades`
 
 1. Check general setup
-    1. check config contains `APT::Periodic::Unattended-Upgrade "1"`;
-    2. check ` /etc/apt/apt.conf.d/50unattended-upgrades` shows allowed origins
-    3. check `systemctl status apt-daily-upgrade.timer` shows something like `Active: active (waiting)`
-    4. check logs e.g. with `journalctl -u unattended-upgrades.service`if it has been executed
+
+   1. check config contains `APT::Periodic::Unattended-Upgrade "1"`;
+   1. check ` /etc/apt/apt.conf.d/50unattended-upgrades` shows allowed origins
+   1. check `systemctl status apt-daily-upgrade.timer` shows something like `Active: active (waiting)`
+   1. check logs e.g. with `journalctl -u unattended-upgrades.service`if it has been executed
 
 Optional: Allow updates also for packages from foreign sources
+
 ```bash
 # both configs will be merged, so to check the outcome use `sudo apt-config dump | grep Periodic`
     Hierzu muss die Datei /etc/apt/apt.conf.d/50unattended-upgrades um folgenden Inhalt ergänzt werden.
@@ -100,6 +101,17 @@ Dies sorgt dafür, dass alle Pakete aus allen Quellen (auch Fremdquellen und PPA
 ```
 
 ## Containers applications
+
+### Reverse proxy
+
+#### Caddy
+
+- in user folder:
+  - create compose.yml
+  - create ./conf/Caddyfile
+  - `docker compose up`
+
+...
 
 <!-- - docker
 - portainer
