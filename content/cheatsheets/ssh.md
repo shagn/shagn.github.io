@@ -1,6 +1,9 @@
-______________________________________________________________________
-
-## title: "SSH" date: "2025-07-06" tags: \["stub"\] draft: true
+---
+title: "SSH" 
+date: "2025-07-06" 
+tags: ["stub"]
+draft: true
+---
 
 ### ssh config
 

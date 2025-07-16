@@ -1,6 +1,9 @@
-______________________________________________________________________
-
-## title: "Shell" date: "2025-01-14" tags: \["stub"\] draft: true
+---
+title: "Shell"
+date: "2025-01-14"
+tags: ["stub"]
+draft: true
+---
 
 ## Operators
 

@@ -1,6 +1,9 @@
-______________________________________________________________________
-
-## title: "Docker" date: "2025-04-03" tags: \["wip"\] draft: false
+---
+title: "Docker" 
+date: "2025-04-03" 
+tags: ["wip"]
+draft: false
+---
 
 ## General
 
