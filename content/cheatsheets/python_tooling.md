@@ -12,10 +12,14 @@ draft: false
 ```bash
 # create a project
 uv init 
+
 # add dependency
 uv add boto3
 uv add "boto3>=@2.38.1"  # in specific version
-uv add boto3 --dev  # as developer dependency
+uv add pytest --dev  # as developer dependency, short for: 'uv add --group dev pytest'
+
+# install dependencies
+uv sync  # includes dev group
 ```
 
 ### poetry

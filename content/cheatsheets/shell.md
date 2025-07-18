@@ -80,8 +80,8 @@ sudo apt-get upgrade # upgrades all packages that can be upgraded without breaki
   - get the size of a folder: `du -hs /path/to/directory`
     - `s`: gives only the summary of the folder, not for every folder separately
 
-- __grep__:
-
+- __grep__: 
+  - `i`: case-insensitive search e.g. to search environment variables `env | grep -i proxy`
   - use regex: e.g. select the lines that contain either "hook id:" or "duration:":
     ```bash
     grep -E '(hook id:|duration:)' pre-commit-logs.txt
