@@ -49,7 +49,20 @@ sudo apt-get update
 sudo apt-get upgrade # upgrades all packages that can be upgraded without breaking other packages
 ```
 
+Managing environment variables
+```bash
+# setting env variable
+export https_proxy=http://<user>:@<proxy_address>:8080
+# removing env variable
+unset https_proxys
+```
+
 ## Commands
+- __rm__:
+  ```bash
+  rm *   # delete all files (no directories) in the current working directory
+  rm -rf *  # delete all files + directories recursively
+  ```
 
 - TODO: df # total used and available disk space
 
