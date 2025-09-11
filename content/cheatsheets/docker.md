@@ -27,6 +27,7 @@ docker build -f <dockerfile> -t <name>:<tag> .
 
 - `-f`:allows specifing a dockerfile outside the location
 - `.`: the positional argument is the build context, here `.` (= the current working directory)[^docker-cli-build]
+- ` --no-cache`
 
 ## Run an image
 

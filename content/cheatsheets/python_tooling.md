@@ -37,7 +37,11 @@ poetry remove checkov --group dev
 ```
 
 ### pyenv
-...
+```bash
+pyenv virtualenvs. # list all virtual environments
+pyenv activate <env_name>  # activate environment
+pyenv virtualenv-delete <env_name>  # delete environment
+```
 
 ## Linter / Formatter
 

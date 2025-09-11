@@ -123,6 +123,7 @@ Selected configuration parameters
 - Undo the last commit, unstage changes: `git reset HEAD~1`
 - Undo the last commit, keep the changes staged: `git reset --soft HEAD~1`
 - Undo changes to a tracked file: `git checkout -- <path_to_file>`
+- Check out the state of a file from a specific branch: `git checkout <branch name> -- <path_to_file>`
 - Remove local untracked files: `git clean -f -d`
 - Reset to a remote branch: `git reset --hard <remote name e.g. origin>/<branch name>`
 
