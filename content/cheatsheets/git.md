@@ -1,8 +1,9 @@
 ---
 title: "Git"
-date: "2025-05-15"
 description: "Overview of often used commands with examples"
+date: "2025-07-03"
 tags: ["wip"]
+draft: false
 ---
 
 ## Glossary
@@ -35,7 +36,8 @@ Each git config variable can be stored in 3 different levels:
   - e.g. setting empty user email for a repo: `git config --local user.email '<>'`
   - e.g. setting _nano_ as editor: `git config --global core.editor "nano"`
 
-- Delete configuration: 
+- Delete configuration:
+
   - one value: `git config --global --unset user.name`
   - one section: `git config --global --remove-section user`
 
@@ -46,6 +48,11 @@ Selected configuration parameters
 - _user.name_
 - _user.email_
 - _push.autoSetupRemote_
+
+> \[!TIP\]
+> git config --global rererre.enabled true  # remembers conflict resolution
+> git config --global column.ui auto
+> git maintenance start [^git-video]
 
 ## Create a repository
 
@@ -102,9 +109,9 @@ Selected configuration parameters
   - change the commit message: `git commit --amend -m "an updated commit message"`
   - change files: `git commit --amend --no-edit`
 
-- Squashing commits: 
+- Squashing commits:
 
-  - Squashing the last _n_ commits: 
+  - Squashing the last _n_ commits:
     - `git reset --soft HEAD~<n>`
     - `git commit -m "<new commit message>"`
     - (`git push --force-with-lease"`)
@@ -116,6 +123,7 @@ Selected configuration parameters
 - Undo the last commit, unstage changes: `git reset HEAD~1`
 - Undo the last commit, keep the changes staged: `git reset --soft HEAD~1`
 - Undo changes to a tracked file: `git checkout -- <path_to_file>`
+- Check out the state of a file from a specific branch: `git checkout <branch name> -- <path_to_file>`
 - Remove local untracked files: `git clean -f -d`
 - Reset to a remote branch: `git reset --hard <remote name e.g. origin>/<branch name>`
 
@@ -179,3 +187,4 @@ Short cheatsheet:  https://www.git-tower.com/blog/git-cheat-sheet/
 
 [^git-scm]: https://git-scm.com/docs/user-manual.html#glossary
 [^git-scm-fetch]: https://git-scm.com/docs/git-fetch
+[^git-video]: https://www.youtube.com/watch?v=aolI_Rz0ZqY

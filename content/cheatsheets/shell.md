@@ -36,7 +36,33 @@ sudo usermod -aG <group> <user>
 # -G: takes a comma separated list of groups
 ```
 
+Reboot / shutting down
+
+```bash
+reboot
+```
+
+Updating packages on Ubuntu
+
+```bash
+sudo apt-get update
+sudo apt-get upgrade # upgrades all packages that can be upgraded without breaking other packages
+```
+
+Managing environment variables
+```bash
+# setting env variable
+export https_proxy=http://<user>:@<proxy_address>:8080
+# removing env variable
+unset https_proxys
+```
+
 ## Commands
+- __rm__:
+  ```bash
+  rm *   # delete all files (no directories) in the current working directory
+  rm -rf *  # delete all files + directories recursively
+  ```
 
 - TODO: df # total used and available disk space
 
@@ -62,18 +88,21 @@ sudo usermod -aG <group> <user>
     chmod 400 private-key-file.pem # restricting file access (read) to yourself
     ```
 
-- __du__: 
+- __du__:
+
   - get the size of a folder: `du -hs /path/to/directory`
     - `s`: gives only the summary of the folder, not for every folder separately
 
 - __grep__: 
+  - `i`: case-insensitive search e.g. to search environment variables `env | grep -i proxy`
   - use regex: e.g. select the lines that contain either "hook id:" or "duration:":
-    ```bash 
+    ```bash
     grep -E '(hook id:|duration:)' pre-commit-logs.txt
     ```
 
-## Custom function 
-```bash 
+## Custom function
+
+```bash
 # in .zshrc
 start_ec2() {
   export AWS_DEFAULT_REGION=eu-central-1
