@@ -1,6 +1,8 @@
-______________________________________________________________________
-
-## title: "VPS setup" date: "2025-01-14" tags: \["stub"\] draft: true
+---
+title: "VPS setup" 
+date: "2025-01-14" 
+tags: ["stub"]
+---
 
 ## Secure SSH login
 
@@ -23,7 +25,7 @@ Prerequisite: a key-pair (use `ssh-keygen` to create one if necessary), for this
 
 ### Prevent Brute-Force attacks
 
-#### Failban
+#### Fail2ban
 
 https://github.com/fail2ban/fail2ban/wiki/How-to-install-fail2ban-packages
 
@@ -90,7 +92,7 @@ Source: [IONOS Guide (German)](https://www.ionos.de/hilfe/sicherheit/dedicated-s
 
 Optional: Allow updates also for packages from foreign sources
 
-```bash
+<!-- ```bash
 # both configs will be merged, so to check the outcome use `sudo apt-config dump | grep Periodic`
     Hierzu muss die Datei /etc/apt/apt.conf.d/50unattended-upgrades um folgenden Inhalt ergänzt werden.
 Unattended-Upgrade::Origins-Pattern {
@@ -98,8 +100,10 @@ Unattended-Upgrade::Origins-Pattern {
 };
 Dies sorgt dafür, dass alle Pakete aus allen Quellen (auch Fremdquellen und PPAs) automatisch installiert werden.
 (see https://wiki.ubuntuusers.de/Aktualisierungen/Konfiguration/#unattended-upgrades)
-```
+``` -->
 
+
+<!-- 
 ## Containers applications
 
 ### Reverse proxy
@@ -112,8 +116,7 @@ Dies sorgt dafür, dass alle Pakete aus allen Quellen (auch Fremdquellen und PPA
   - `docker compose up`
 
 ...
-
-<!-- - docker
+- docker
 - portainer
 - watchtower -->
 

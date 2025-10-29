@@ -31,6 +31,8 @@ poetry add moto[dynamodb] --group dev  # as developer dependency
 
 # update dependency
 poetry update aiohttp
+# update (transitive) dependency to newest version and write lock file
+poetry update aiohttp --lock
 
 # remove dependency
 poetry remove checkov --group dev
