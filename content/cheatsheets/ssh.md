@@ -2,7 +2,6 @@
 title: "SSH" 
 date: "2025-07-06" 
 tags: ["stub"]
-draft: true
 ---
 
 ### ssh config
@@ -33,15 +32,30 @@ ssh -G vps
 ssh-keygen -t ed25519  -C "<comment>" 
 ```
 
-### Removing  known host entries
+### Removing known host entries
 
 ```bash
 ssh-keygen -f ~/.ssh/known_hosts -R 123.45.678.9
 ```
 
-## Copy public key to server
+### Copy public key to server
 
 ```bash
 ssh-copy-id -i <public key> <user>@<ip_address>
 # e.g. ssh-copy-id -i ~/.ssh/id_vps.pub user@123.45.678.9
+```
+
+### Checking the passphrase for a private key 
+```bash
+ssh-keygen -y -f /path/to/your/private_key
+```
+
+## ssh agent
+
+```bash
+# load key in agent
+ssh-add /path/to/your/private_key
+
+# check keys loaded in the agent
+ssh-add -l
 ```

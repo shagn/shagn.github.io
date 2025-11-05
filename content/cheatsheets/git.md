@@ -1,7 +1,7 @@
 ---
 title: "Git"
 description: "Overview of often used commands with examples"
-date: "2025-07-03"
+date: "2025-11-05"
 tags: ["wip"]
 draft: false
 ---
@@ -174,6 +174,14 @@ The `git remote` command lets you manage connections to other repositories.
 
 - Show all commits: `git log` / `git log --oneline`
 - Show commits which changed a file: `git log <path to file>` / `git log -p <path to file>`
+- Reset a branch history to one commit:
+  ```bash
+  git checkout --orphan new-branch
+  git add -A 
+  git commit -m "<some message>"
+  git branch -D <branch_name>
+  git branch -m <branch_name>  # 'moves'/renames a branch
+  ```
 
 ## Miscellaneous
 
