@@ -1,5 +1,5 @@
 ---
-title: "SSH" 
+title: "ssh" 
 date: "2025-07-06" 
 tags: ["stub"]
 ---

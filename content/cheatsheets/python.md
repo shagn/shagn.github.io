@@ -1,5 +1,5 @@
 ---
-title: "Python"
+title: "python"
 date: "2024-12-30"
 description: "Some helpful reference when working with python"
 tags: ["stub"]

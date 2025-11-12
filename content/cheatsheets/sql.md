@@ -7,6 +7,14 @@ draft: false
 
 ## Postgres
 
+### Show non-system tables
+```sql
+SELECT schemaname, tablename
+FROM pg_catalog.pg_tables
+WHERE schemaname NOT IN ('pg_catalog', 'information_schema')
+ORDER BY schemaname, tablename;
+```
+
 ### Select query on _jsonb_ column
 
 Example content of the _json_column_name_: `[{"json_key":"json_value"}]`

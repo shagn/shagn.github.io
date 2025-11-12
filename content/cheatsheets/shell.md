@@ -1,5 +1,5 @@
 ---
-title: "Shell"
+title: "shell"
 date: "2025-01-14"
 tags: ["stub"]
 draft: true

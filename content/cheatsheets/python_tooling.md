@@ -1,5 +1,5 @@
 ---
-title: "Python Tooling"
+title: "python tooling"
 date: "2025-06-06"
 description: ""
 tags: ["stub"]

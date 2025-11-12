@@ -1,5 +1,5 @@
 ---
-title: "Git"
+title: "git"
 description: "Overview of often used commands with examples"
 date: "2025-11-05"
 tags: ["wip"]
