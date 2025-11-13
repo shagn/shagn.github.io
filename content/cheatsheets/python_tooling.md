@@ -1,6 +1,6 @@
 ---
 title: "python tooling"
-date: "2025-06-06"
+date: "2025-11-13"
 description: ""
 tags: ["stub"]
 draft: false
@@ -31,6 +31,7 @@ poetry add moto[dynamodb] --group dev  # as developer dependency
 
 # update dependency
 poetry update aiohttp
+poetry update aiohttp --dry-run
 # update (transitive) dependency to newest version and write lock file
 poetry update aiohttp --lock
 

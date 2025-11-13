@@ -1,9 +1,11 @@
 ---
-title: "AWS CLI"
-date: "2025-01-14"
+title: "AWS"
+date: "2025-11-13"
 tags: ["stub"]
 draft: false
 ---
+
+# CLI
 
 ## EC2
 ```bash
@@ -26,4 +28,21 @@ List all assigned IPs in subnet `subnet-abcxyz`
 
 ```bash
 aws ec2 describe-network-interfaces --filters "Name=subnet-id,Values=subnet-abcxyz" --query 'NetworkInterfaces[*].PrivateIpAddress'
+```
+
+# Portal
+
+## Cloudwatch Log Insights
+
+**Analyze Lambda processing times**
+```
+filter @type = "REPORT" 
+| stats round(avg(@duration)/1000) as avg_duration, round(max(@initDuration)/1000) as max_init, count(@requestId) as num_requests by bin(1h)
+```
+**Search for certain log message**
+```
+fields @timestamp, @message, @logStream, @log
+| filter @message like /ERROR/
+| sort @timestamp desc
+| limit 10000
 ```
