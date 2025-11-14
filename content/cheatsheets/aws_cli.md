@@ -46,3 +46,9 @@ fields @timestamp, @message, @logStream, @log
 | sort @timestamp desc
 | limit 10000
 ```
+
+**Listing the most frequent errors**
+fields @timestamp, @message
+| filter level = "ERROR"
+| stats count() as occurences by message
+| sort occurences desc
