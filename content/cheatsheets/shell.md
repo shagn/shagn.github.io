@@ -92,6 +92,7 @@ unset https_proxys
 
   - get the size of a folder: `du -hs /path/to/directory`
     - `s`: gives only the summary of the folder, not for every folder separately
+    - `h`: human readable size in MiB or GiB instead of exact KiB
 
 - __grep__: 
   - `i`: case-insensitive search e.g. to search environment variables `env | grep -i proxy`
