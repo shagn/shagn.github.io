@@ -1,6 +1,7 @@
 ---
 title: "AWS"
-date: "2025-11-13"
+description: "AWS Portal/CLI which came handy at some point"
+date: "2026-01-15"
 tags: ["stub"]
 draft: false
 ---
@@ -28,6 +29,12 @@ List all assigned IPs in subnet `subnet-abcxyz`
 
 ```bash
 aws ec2 describe-network-interfaces --filters "Name=subnet-id,Values=subnet-abcxyz" --query 'NetworkInterfaces[*].PrivateIpAddress'
+```
+
+## Secret Manager
+```bash
+# List all secrets which have no custom key set
+aws secretsmanager list-secrets --query 'SecretList[?KmsKeyId==null].[Name,ARN]' --output table
 ```
 
 # Portal

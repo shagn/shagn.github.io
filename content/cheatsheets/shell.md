@@ -1,8 +1,8 @@
 ---
 title: "shell"
-date: "2025-01-14"
+date: "2026-01-15"
 tags: ["stub"]
-draft: true
+draft: false
 ---
 
 ## Operators
@@ -55,18 +55,12 @@ Managing environment variables
 export https_proxy=http://<user>:@<proxy_address>:8080
 # removing env variable
 unset https_proxys
+# showing env variables
+printenv
 ```
 
 ## Commands
-- __rm__:
-  ```bash
-  rm *   # delete all files (no directories) in the current working directory
-  rm -rf *  # delete all files + directories recursively
-  ```
-
 - TODO: df # total used and available disk space
-
-- TODO: key generation
 
 - TODO: nohup
 
@@ -100,6 +94,22 @@ unset https_proxys
     ```bash
     grep -E '(hook id:|duration:)' pre-commit-logs.txt
     ```
+
+- __ln__: command used to create links between files
+  - `s`: create a symbolic (soft) link rather than a hard link
+    ```bash
+    # creating a symlink
+    ln -s <path to real file e.g. ~/dotfiles/ghostty/config> <where the symlink should be created e.g. ~/.config/ghostty/config>
+
+    # checking a symlink
+    ls -l <path to symlink>
+    ```
+
+- __rm__:
+  ```bash
+  rm *   # delete all files (no directories) in the current working directory
+  rm -rf *  # delete all files + directories recursively
+  ```
 
 ## Custom function
 
