@@ -1,12 +1,24 @@
 ---
-title: "AWS"
+title: "AWS Portal/CLI"
 description: "AWS Portal/CLI which came handy at some point"
-date: "2026-01-15"
+date: "2026-01-23"
 tags: ["stub"]
 draft: false
 ---
 
 # CLI
+
+## Cloudtrail
+Get who accessed a the value of an AWS secret in the last 7 days 
+```bash
+SECRET_MATCH="<secret_name>"
+aws cloudtrail lookup-events \
+  --region eu-central-1 \
+  --lookup-attributes AttributeKey=EventName,AttributeValue=GetSecretValue \
+  --start-time "$(date -u -v-7d +%Y-%m-%dT%H:%M:%SZ)" \
+  --output table \
+  --query "Events[?Resources[0].ResourceName!=null && contains(Resources[0].ResourceName, \`$SECRET_MATCH\`)].{Time:EventTime,User:Username,Secret:Resources[0].ResourceName}"
+```
 
 ## EC2
 ```bash
@@ -23,18 +35,16 @@ aws s3 rm <s3_uri> # add --recursive to avoid being prompted for confirmation fo
 aws s3 rm s3://some-bucket-name/ --recursive --exclude "*" --include "*.json" --dryrun  # delete all JSON files from a bucket
 ```
 
-## VPC
-
-List all assigned IPs in subnet `subnet-abcxyz`
-
-```bash
-aws ec2 describe-network-interfaces --filters "Name=subnet-id,Values=subnet-abcxyz" --query 'NetworkInterfaces[*].PrivateIpAddress'
-```
-
 ## Secret Manager
 ```bash
 # List all secrets which have no custom key set
 aws secretsmanager list-secrets --query 'SecretList[?KmsKeyId==null].[Name,ARN]' --output table
+```
+
+## VPC
+List all assigned IPs in subnet `subnet-abcxyz`
+```bash
+aws ec2 describe-network-interfaces --filters "Name=subnet-id,Values=subnet-abcxyz" --query 'NetworkInterfaces[*].PrivateIpAddress'
 ```
 
 # Portal
