@@ -192,6 +192,12 @@ Git shortcuts / aliases of oh my zsh git plugin: [ohmyzsh/git.plugin.zsh](https:
 
 Short cheatsheet:  https://www.git-tower.com/blog/git-cheat-sheet/
 
+## CLI
+Trigger a workflow from a branch
+```bash
+gh workflow run <workflow file e.g. pre-commit.yaml> --ref <branch e.g. feature/add-cache>
+```
+
 ## References
 
 [^git-scm]: https://git-scm.com/docs/user-manual.html#glossary

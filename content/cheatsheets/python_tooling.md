@@ -41,7 +41,8 @@ poetry remove checkov --group dev
 
 ### pyenv
 ```bash
-pyenv virtualenvs. # list all virtual environments
+pyenv virtualenvs  # list all virtual environments
+pyenv virtualenv <python version> <environment name> # e.g. pyenv virtualenv 3.12 my-venv
 pyenv activate <env_name>  # activate environment
 pyenv virtualenv-delete <env_name>  # delete environment
 ```

@@ -79,7 +79,8 @@ printenv
     permissions add up: 6 = 4 + 2: read and write access
 
     ```bash
-    chmod 400 private-key-file.pem # restricting file access (read) to yourself
+    chmod 400 private-key-file.pem  # restricting file access (read) to yourself
+    chmod +x some_script.py  # make a file executable
     ```
 
 - __du__:
