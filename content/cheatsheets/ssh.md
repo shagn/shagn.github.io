@@ -4,7 +4,7 @@ date: "2025-07-06"
 tags: ["stub"]
 ---
 
-### ssh config
+## ssh config
 
 ```bash
 Host vps
@@ -58,4 +58,10 @@ ssh-add /path/to/your/private_key
 
 # check keys loaded in the agent
 ssh-add -l
+```
+
+## scp 
+
+```bash
+scp username@source:/location/to/file username@destination:/where/to/put
 ```

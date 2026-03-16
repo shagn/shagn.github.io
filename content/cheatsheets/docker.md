@@ -1,6 +1,6 @@
 ---
 title: "docker" 
-date: "2025-04-03" 
+date: "2025-12-02" 
 tags: ["wip"]
 draft: false
 ---
@@ -16,6 +16,9 @@ docker system prune -a # remove all unused images, not just dangling ones
 
 # delete all images 
 docker rmi $(docker images -q)
+
+# delete named volumes (see compose.yml below)
+docker volume rm caddy_data
 ```
 
 ## Build an image

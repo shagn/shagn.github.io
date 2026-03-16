@@ -92,6 +92,10 @@ Source: [IONOS Guide (German)](https://www.ionos.de/hilfe/sicherheit/dedicated-s
 
 Optional: Allow updates also for packages from foreign sources
 
+## Docker 
+
+Follow installation instructions: https://docs.docker.com/engine/install/ 
+
 <!-- ```bash
 # both configs will be merged, so to check the outcome use `sudo apt-config dump | grep Periodic`
     Hierzu muss die Datei /etc/apt/apt.conf.d/50unattended-upgrades um folgenden Inhalt ergänzt werden.

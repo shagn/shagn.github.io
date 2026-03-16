@@ -64,6 +64,9 @@ printenv
 
 - TODO: nohup
 
+- TODO: tail -n 200 some.log
+  - tail -f some.log
+
 - __chmod__: changing rights
 
   3 numbers: _ _ _ -> permission for **user, group, others**
