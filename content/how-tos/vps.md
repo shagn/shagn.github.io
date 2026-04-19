@@ -51,7 +51,8 @@ The default configuration is stored at `/etc/fail2ban/jail.conf` and can be over
 
 ```
 [DEFAULT]
-bantime = 2h
+bantime = 24h
+findtime = 2h
 ```
 
 Restart fail2ban to load configuration: `systemctl restart fail2ban`
@@ -78,10 +79,14 @@ Source: [IONOS Guide (German)](https://www.ionos.de/hilfe/sicherheit/dedicated-s
    sudo apt install unattended-upgrades
    ```
 
-1. Check in the configuration if security updates are not commented out
+1. Check in the configuration if security updates are enabled
 
-   - main config: `/etc/apt/apt.conf.d/50unattended-upgrades`
-   - auto-upgrade config: `cat /etc/apt/apt.conf.d/20auto-upgrades`
+   - `"${distro_id}:${distro_codename}-security";` not commented out in main config: `/etc/apt/apt.conf.d/50unattended-upgrades`
+   - the following two lines are in the auto-upgrade config: `/etc/apt/apt.conf.d/20auto-upgrades`
+      ```bash
+      APT::Periodic::Update-Package-Lists "1";
+      APT::Periodic::Unattended-Upgrade "1";
+      ```
 
 1. Check general setup
 
@@ -95,33 +100,3 @@ Optional: Allow updates also for packages from foreign sources
 ## Docker 
 
 Follow installation instructions: https://docs.docker.com/engine/install/ 
-
-<!-- ```bash
-# both configs will be merged, so to check the outcome use `sudo apt-config dump | grep Periodic`
-    Hierzu muss die Datei /etc/apt/apt.conf.d/50unattended-upgrades um folgenden Inhalt ergänzt werden.
-Unattended-Upgrade::Origins-Pattern {
-    "origin=*";
-};
-Dies sorgt dafür, dass alle Pakete aus allen Quellen (auch Fremdquellen und PPAs) automatisch installiert werden.
-(see https://wiki.ubuntuusers.de/Aktualisierungen/Konfiguration/#unattended-upgrades)
-``` -->
-
-
-<!-- 
-## Containers applications
-
-### Reverse proxy
-
-#### Caddy
-
-- in user folder:
-  - create compose.yml
-  - create ./conf/Caddyfile
-  - `docker compose up`
-
-...
-- docker
-- portainer
-- watchtower -->
-
-...
