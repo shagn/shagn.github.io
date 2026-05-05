@@ -74,7 +74,7 @@ Selected configuration parameters
 
 - Delete a branch:
 
-  - local: `git branch --delete <branch name>`
+  - local: `git branch --delete <branch name>` / `git branch -D <branch name>` 
   - remote: `git push origin --delete <branch name>`
 
 - Rename a branch:
