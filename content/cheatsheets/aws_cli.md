@@ -20,6 +20,16 @@ aws cloudtrail lookup-events \
   --query "Events[?Resources[0].ResourceName!=null && contains(Resources[0].ResourceName, \`$SECRET_MATCH\`)].{Time:EventTime,User:Username,Secret:Resources[0].ResourceName}"
 ```
 
+## Cloudwatch
+
+**Show Cloudwatch Log groups sorted by storage size**
+
+```bash
+aws logs describe-log-groups \
+  --query 'reverse(sort_by(logGroups, &storedBytes))[*].{Name:logGroupName, StoredBytes:storedBytes, RetentionDays:retentionInDays}' \
+  --output table
+```
+
 ## EC2
 ```bash
 aws ec2 start-instances --instance-ids <instance id>
